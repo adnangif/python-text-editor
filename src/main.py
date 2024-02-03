@@ -39,12 +39,13 @@ class App(ctk.CTk):
         self.main_text_box = ctk.CTkTextbox(master=self)
         self.main_text_box.pack(padx=10,pady=10,expand='yes',fill='both')
 
-        
 
-        
+
+
 
 if __name__ == '__main__':
     app = App()
-    
     app.mainloop()
+
+
 
