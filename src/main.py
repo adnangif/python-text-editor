@@ -14,7 +14,7 @@ class App(ctk.CTk):
         self.title("Text Editor")
         self.option_add("*Font",'aerial 13')
 
-        self.geometry("500x500")
+        self.geometry("700x500")
 
         self.menu_bar = tk.Menu(master=self)
         self.menu_item_File = tk.Menu(self.menu_bar,tearoff=0)
@@ -35,11 +35,9 @@ class App(ctk.CTk):
         self.config(menu=self.menu_bar)
 
 
-        self.main_frame = ctk.CTkFrame(master=self)
-        self.main_frame.pack(expand='yes',fill='both')
-
-        self.main_text_box = ctk.CTkTextbox(master=self.main_frame)
-        self.main_text_box.pack(padx=5,pady=5,expand='yes',fill='both')
+        ## Text Box
+        self.main_text_box = ctk.CTkTextbox(master=self)
+        self.main_text_box.pack(padx=10,pady=10,expand='yes',fill='both')
 
         
 
