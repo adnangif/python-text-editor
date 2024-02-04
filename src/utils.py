@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import filedialog
 
-def fileOpen(master: tk.Tk):
+def Open(master: tk.Tk):
     def inner_function():
         pass;
     
