@@ -1,4 +1,3 @@
-
 import tkinter as tk
 import utils
 
@@ -6,7 +5,8 @@ class App(tk.Tk):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-        self.file_path: str = "";
+        self.file_path: str = ""
+        self.content: str = ""
 
         
         self.title("Text Editor")
@@ -34,7 +34,7 @@ class App(tk.Tk):
 
 
         ## Text Box
-        self.main_text_box = tk.Text(master=self)
+        self.main_text_box = tk.Text(master=self,undo=True)
         self.main_text_box.pack(padx=10,pady=10,expand='yes',fill='both')
 
 
