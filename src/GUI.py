@@ -23,8 +23,8 @@ class App(tk.Tk):
         self.menu_item_File.add_command(label="Open",
                                         command=utils.Open(master=self),
                                         accelerator="Ctrl+O".rjust(15),
-
                                         )
+
         self.menu_item_File.add_command(label="Save As",command=utils.SaveAs(master=self))
         self.menu_item_File.add_command(label="Save",command=utils.Save(master=self))
         self.menu_item_File.add_command(label="Exit",command=utils.Exit(master=self))
