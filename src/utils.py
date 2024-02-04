@@ -41,5 +41,7 @@ def Clear(master: tk.Tk):
         pass;
     
     return inner_function;
+    
+    
 if __name__ == "__main__":
     pass
