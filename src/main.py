@@ -6,6 +6,8 @@ class App(tk.Tk):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
+        self.file_path: str = "";
+
         
         self.title("Text Editor")
         self.option_add("*Font",'aerial 13')
@@ -16,7 +18,7 @@ class App(tk.Tk):
         self.menu_item_File = tk.Menu(self.menu_bar,tearoff=0)
         self.menu_item_Edit = tk.Menu(self.menu_bar,tearoff=0)
 
-        self.menu_item_File.add_command(label="Open",command=fileOpen)
+        self.menu_item_File.add_command(label="Open",command=fileOpen(master=self))
         self.menu_item_File.add_command(label="Save As")
         self.menu_item_File.add_command(label="Save")
         self.menu_item_File.add_command(label="Exit")
@@ -34,6 +36,7 @@ class App(tk.Tk):
         ## Text Box
         self.main_text_box = tk.Text(master=self)
         self.main_text_box.pack(padx=10,pady=10,expand='yes',fill='both')
+
 
 
 
