@@ -1,12 +1,8 @@
-import customtkinter as ctk
+
 import tkinter as tk
 
-ctk.set_appearance_mode("light")
 
-ctk.set_default_color_theme("blue")
-
-
-class App(ctk.CTk):
+class App(tk.Tk):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
@@ -36,7 +32,7 @@ class App(ctk.CTk):
 
 
         ## Text Box
-        self.main_text_box = ctk.CTkTextbox(master=self)
+        self.main_text_box = tk.Text(master=self)
         self.main_text_box.pack(padx=10,pady=10,expand='yes',fill='both')
 
 
