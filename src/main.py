@@ -24,8 +24,8 @@ class App(tk.Tk):
         self.menu_item_File.add_command(label="Exit")
 
         self.menu_item_Edit.add_command(label="Copy All")
-        self.menu_item_Edit.add_command(label="Cut")
         self.menu_item_Edit.add_command(label="Paste")
+        self.menu_item_Edit.add_command(label="Clear")
         
         self.menu_bar.add_cascade(label="File",menu=self.menu_item_File)
         self.menu_bar.add_cascade(label="Edit",menu=self.menu_item_Edit)
