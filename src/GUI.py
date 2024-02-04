@@ -1,4 +1,5 @@
 import tkinter as tk
+import tkinter.scrolledtext as tkst
 import utils
 
 class App(tk.Tk):
@@ -34,7 +35,7 @@ class App(tk.Tk):
 
 
         ## Text Box
-        self.main_text_box = tk.Text(master=self,undo=True)
+        self.main_text_box = tkst.ScrolledText(master=self,undo=True)
         self.main_text_box.pack(padx=10,pady=10,expand='yes',fill='both')
 
 
