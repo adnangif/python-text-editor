@@ -1,6 +1,6 @@
 
 import tkinter as tk
-
+from utils import *
 
 class App(tk.Tk):
     def __init__(self, *args, **kwargs):
@@ -16,7 +16,7 @@ class App(tk.Tk):
         self.menu_item_File = tk.Menu(self.menu_bar,tearoff=0)
         self.menu_item_Edit = tk.Menu(self.menu_bar,tearoff=0)
 
-        self.menu_item_File.add_command(label="Open")
+        self.menu_item_File.add_command(label="Open",command=fileOpen)
         self.menu_item_File.add_command(label="Save As")
         self.menu_item_File.add_command(label="Save")
         self.menu_item_File.add_command(label="Exit")
