@@ -3,7 +3,7 @@ from tkinter import filedialog,messagebox
 import GUI
 
 def Open(master: GUI.App):
-    def inner_function():
+    def inner_function(event=None):
         master.file_path = filedialog.askopenfilename()
 
         if(master.file_path == ''):

@@ -1,6 +1,7 @@
 import tkinter as tk
-import tkinter.scrolledtext as tkst
+from tkinter import scrolledtext
 import utils
+
 
 class App(tk.Tk):
     def __init__(self, *args, **kwargs):
@@ -19,7 +20,11 @@ class App(tk.Tk):
         self.menu_item_File = tk.Menu(self.menu_bar,tearoff=0)
         self.menu_item_Edit = tk.Menu(self.menu_bar,tearoff=0)
 
-        self.menu_item_File.add_command(label="Open",command=utils.Open(master=self))
+        self.menu_item_File.add_command(label="Open",
+                                        command=utils.Open(master=self),
+                                        accelerator="Ctrl+O".rjust(15),
+
+                                        )
         self.menu_item_File.add_command(label="Save As",command=utils.SaveAs(master=self))
         self.menu_item_File.add_command(label="Save",command=utils.Save(master=self))
         self.menu_item_File.add_command(label="Exit",command=utils.Exit(master=self))
@@ -33,10 +38,13 @@ class App(tk.Tk):
 
         self.config(menu=self.menu_bar)
 
-
         ## Text Box
-        self.main_text_box = tkst.ScrolledText(master=self,undo=True)
+        self.main_text_box = scrolledtext.ScrolledText(master=self,undo=True)
         self.main_text_box.pack(padx=10,pady=10,expand='yes',fill='both')
+
+        
+        ## Bindings
+        self.bind_all('<Control-o>', utils.Open(master=self))
 
 
 
