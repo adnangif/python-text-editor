@@ -1,9 +1,11 @@
 import tkinter as tk
 from tkinter import filedialog
+import GUI
 
-def Open(master: tk.Tk):
+def Open(master: GUI.App):
     def inner_function():
-        pass;
+        pass
+        
     
     return inner_function;
 
