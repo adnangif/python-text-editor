@@ -19,13 +19,13 @@ class App(tk.Tk):
         self.menu_item_Edit = tk.Menu(self.menu_bar,tearoff=0)
 
         self.menu_item_File.add_command(label="Open",command=utils.Open(master=self))
-        self.menu_item_File.add_command(label="Save As")
-        self.menu_item_File.add_command(label="Save")
-        self.menu_item_File.add_command(label="Exit")
+        self.menu_item_File.add_command(label="Save As",command=utils.SaveAs(master=self))
+        self.menu_item_File.add_command(label="Save"command=utils.Save(master=self))
+        self.menu_item_File.add_command(label="Exit"command=utils.Exit(master=self))
 
-        self.menu_item_Edit.add_command(label="Copy All")
-        self.menu_item_Edit.add_command(label="Paste")
-        self.menu_item_Edit.add_command(label="Clear")
+        self.menu_item_Edit.add_command(label="Copy All"command=utils.CopyAll(master=self))
+        self.menu_item_Edit.add_command(label="Paste"command=utils.Paste(master=self))
+        self.menu_item_Edit.add_command(label="Clear"command=utils.Clear(master=self))
         
         self.menu_bar.add_cascade(label="File",menu=self.menu_item_File)
         self.menu_bar.add_cascade(label="Edit",menu=self.menu_item_Edit)
