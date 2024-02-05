@@ -3,7 +3,7 @@ from tkinter import filedialog,messagebox
 import GUI
 
 
-def CopyAll(master: tk.Tk):
+def CopyAll(master: GUI.App):
     def inner_function(event=None):
         pass;
     

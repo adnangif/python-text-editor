@@ -4,7 +4,7 @@ import GUI
 
 
 
-def SaveAs(master: tk.Tk):
+def SaveAs(master: GUI.App):
     def inner_function(event=None):
         pass;
     

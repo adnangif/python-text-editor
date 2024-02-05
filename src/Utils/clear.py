@@ -4,7 +4,7 @@ import GUI
 
 
 
-def Clear(master: tk.Tk):
+def Clear(master: GUI.App):
     def inner_function(event=None):
         pass;
     

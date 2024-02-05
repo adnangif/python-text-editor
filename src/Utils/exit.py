@@ -5,7 +5,7 @@ import GUI
 
 
 
-def Exit(master: tk.Tk):
+def Exit(master: GUI.App):
     def inner_function(event=None):
         pass;
     

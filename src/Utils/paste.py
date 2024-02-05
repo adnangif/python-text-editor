@@ -3,7 +3,7 @@ from tkinter import filedialog,messagebox
 import GUI
 
 
-def Paste(master: tk.Tk):
+def Paste(master: GUI.App):
     def inner_function(event=None):
         pass;
     
