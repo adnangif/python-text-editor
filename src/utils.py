@@ -18,36 +18,36 @@ def Open(master: GUI.App):
             master.content = content
     return inner_function;
 
-def SaveAs(master: tk.Tk):
+def SaveAs(master: GUI.App):
     def inner_function(event=None):
         pass;
     
     return inner_function;
 
-def Save(master: tk.Tk):
+def Save(master: GUI.App):
     def inner_function(event=None):
         pass;
     
     return inner_function;
 
-def Exit(master: tk.Tk):
+def Exit(master: GUI.App):
     def inner_function(event=None):
         pass;
     
     return inner_function;
 
-def CopyAll(master: tk.Tk):
+def CopyAll(master: GUI.App):
     def inner_function(event=None):
         pass;
     
     return inner_function;
-def Paste(master: tk.Tk):
+def Paste(master: GUI.App):
     def inner_function(event=None):
         pass;
     
     return inner_function;
 
-def Clear(master: tk.Tk):
+def Clear(master: GUI.App):
     def inner_function(event=None):
         pass;
     
