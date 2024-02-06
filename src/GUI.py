@@ -67,7 +67,7 @@ class App(tk.Tk):
                                         command=utils.Clear(master=self),
                                         accelerator="Ctrl+O".rjust(15),
                                         )
-                                        
+
         self.menu_item_Edit.add_command(label="Undo",
                                         command=self.main_text_box.edit_undo,
                                         accelerator="Ctrl+Z".rjust(15),
