@@ -20,6 +20,19 @@ class App(tk.Tk):
         self.menu_item_File = tk.Menu(self.menu_bar,tearoff=0)
         self.menu_item_Edit = tk.Menu(self.menu_bar,tearoff=0)
 
+        self.menu_bar.add_cascade(label="File",menu=self.menu_item_File)
+        self.menu_bar.add_cascade(label="Edit",menu=self.menu_item_Edit)
+
+        self.config(menu=self.menu_bar)
+
+        
+
+        ## Text Box
+        self.main_text_box = scrolledtext.ScrolledText(master=self,undo=True)
+        self.main_text_box.pack(padx=10,pady=10,expand='yes',fill='both')
+
+
+        ## Button functionality
         self.menu_item_File.add_command(label="Open",
                                         command=utils.Open(master=self),
                                         accelerator="Ctrl+O".rjust(15),
@@ -54,15 +67,18 @@ class App(tk.Tk):
                                         command=utils.Clear(master=self),
                                         accelerator="Ctrl+O".rjust(15),
                                         )
+                                        
+        self.menu_item_Edit.add_command(label="Undo",
+                                        command=self.main_text_box.edit_undo,
+                                        accelerator="Ctrl+Z".rjust(15),
+                                        )
+
+        self.menu_item_Edit.add_command(label="Redo",
+                                        command=self.main_text_box.edit_redo,
+                                        accelerator="Ctrl+Y".rjust(15),
+                                        )
         
-        self.menu_bar.add_cascade(label="File",menu=self.menu_item_File)
-        self.menu_bar.add_cascade(label="Edit",menu=self.menu_item_Edit)
 
-        self.config(menu=self.menu_bar)
-
-        ## Text Box
-        self.main_text_box = scrolledtext.ScrolledText(master=self,undo=True)
-        self.main_text_box.pack(padx=10,pady=10,expand='yes',fill='both')
 
         
         ## Bindings
