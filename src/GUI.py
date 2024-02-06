@@ -29,10 +29,12 @@ class App(tk.Tk):
                                         command=utils.SaveAs(master=self),
                                         accelerator="Ctrl+O".rjust(15),
                                         )
+
         self.menu_item_File.add_command(label="Save",
                                         command=utils.Save(master=self),
                                         accelerator="Ctrl+O".rjust(15),
                                         )
+
         self.menu_item_File.add_command(label="Exit",
                                         command=utils.Exit(master=self),
                                         accelerator="Ctrl+O".rjust(15),
@@ -42,10 +44,12 @@ class App(tk.Tk):
                                         command=utils.CopyAll(master=self),
                                         accelerator="Ctrl+O".rjust(15),
                                         )
+
         self.menu_item_Edit.add_command(label="Paste",
                                         command=utils.Paste(master=self),
                                         accelerator="Ctrl+O".rjust(15),
                                         )
+
         self.menu_item_Edit.add_command(label="Clear",
                                         command=utils.Clear(master=self),
                                         accelerator="Ctrl+O".rjust(15),
