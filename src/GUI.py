@@ -83,6 +83,7 @@ class App(tk.Tk):
         
         ## Bindings
         self.bind_all('<Control-o>', utils.Open(master=self))
+        self.wm_protocol("WM_DELETE_WINDOW", utils.Exit(master=self))
 
 
 
