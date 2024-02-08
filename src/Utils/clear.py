@@ -6,6 +6,6 @@ import GUI
 
 def Clear(master: GUI.App):
     def inner_function(event=None):
-        pass;
+        master.main_text_box.delete('1.0',tk.END)
     
     return inner_function;
