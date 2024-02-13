@@ -16,9 +16,11 @@ def Exit(master: GUI.App):
         if(save_before_exit == False):
             sys.exit()
 
-        master.file_path = filedialog.asksaveasfilename(filetypes=[("txt files ",".txt")],defaultextension=".txt")
+        
+
         if(master.file_path == ''):
-            return
+            master.file_path = filedialog.asksaveasfilename(filetypes=[("txt files ",".txt")],defaultextension=".txt")
+
         
         with open(master.file_path,'w') as fw:
             fw.write(content)
