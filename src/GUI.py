@@ -9,6 +9,8 @@ class App(tk.Tk):
 
         self.file_path: str = ""
         self.content: str = ""
+        self.isSaved: bool = False;
+        self.isEdited:bool = False;
 
         
         self.title("Text Editor")
@@ -40,32 +42,32 @@ class App(tk.Tk):
 
         self.menu_item_File.add_command(label="Save As",
                                         command=utils.SaveAs(master=self),
-                                        accelerator="Ctrl+O".rjust(15),
+                                        accelerator="Ctrl+Shift+S".rjust(15),
                                         )
 
         self.menu_item_File.add_command(label="Save",
                                         command=utils.Save(master=self),
-                                        accelerator="Ctrl+O".rjust(15),
+                                        accelerator="Ctrl+S".rjust(15),
                                         )
 
         self.menu_item_File.add_command(label="Exit",
                                         command=utils.Exit(master=self),
-                                        accelerator="Ctrl+O".rjust(15),
+                                        accelerator="Ctrl+Shift+X".rjust(15),
                                         )
 
         self.menu_item_Edit.add_command(label="Copy All",
                                         command=utils.CopyAll(master=self),
-                                        accelerator="Ctrl+O".rjust(15),
+                                        accelerator="Ctrl+Shift+C".rjust(15),
                                         )
 
         self.menu_item_Edit.add_command(label="Paste",
                                         command=utils.Paste(master=self),
-                                        accelerator="Ctrl+O".rjust(15),
+                                        accelerator="Ctrl+Shift+V".rjust(15),
                                         )
 
         self.menu_item_Edit.add_command(label="Clear",
                                         command=utils.Clear(master=self),
-                                        accelerator="Ctrl+O".rjust(15),
+                                        accelerator="Ctrl+Shift+D".rjust(15),
                                         )
 
         self.menu_item_Edit.add_command(label="Undo",
@@ -83,6 +85,9 @@ class App(tk.Tk):
         
         ## Bindings
         self.bind_all('<Control-o>', utils.Open(master=self))
+        self.bind_all('<Control-s>', utils.Save(master=self))
+        self.bind_all('<Control-S>', utils.SaveAs(master=self))
+        self.bind_all('<Control-X>', utils.Exit(master=self))
         self.wm_protocol("WM_DELETE_WINDOW", utils.Exit(master=self))
 
 
