@@ -80,6 +80,9 @@ class App(tk.Tk):
                                         accelerator="Ctrl+Y".rjust(15),
                                         )
         
+        self.menu_item_Edit.add_command(label="Highlight",
+                                        command=utils.Highlight(master=self),
+                                        )
 
 
         

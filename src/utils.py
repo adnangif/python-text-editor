@@ -5,3 +5,4 @@ from Utils.exit import Exit;
 from Utils.paste import Paste;
 from Utils.save import Save;
 from Utils.saveas import SaveAs;
+from Utils.highlight import Highlight;
