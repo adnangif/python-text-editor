@@ -27,6 +27,22 @@ class App(tk.Tk):
 
         self.config(menu=self.menu_bar)
 
+
+        ## Find all 
+        self.find_frame = tk.Frame(master=self)
+        self.find_frame.pack()
+
+        self.find_text_label = tk.Label(master=self.find_frame,text='Search: ')
+        self.find_text_entry = tk.Entry(master=self.find_frame)
+        self.find_text_btn = tk.Button(master=self.find_frame,
+                                        text="Find All Occurances",
+                                        command=utils.FindAll(master=self)
+                                        )
+
+        self.find_text_label.grid(row=0,column=0,pady=2)
+        self.find_text_entry.grid(row=0,column=1,columnspan=2,pady=2)
+        self.find_text_btn.grid(row=0,column=3,pady=2,padx=8)                                                                                                                                                                                                            
+
         
 
         ## Text Box
