@@ -10,6 +10,8 @@
 **Reasoning:**
 By organizing the text editor's functionality into these distinct layers, we ensure modularity, scalability, and maintainability. Each layer focuses on specific tasks, making it easier to understand, develop, and maintain the text editor codebase. Additionally, the optional layers (Language Support and Extensions/Plugins) provide flexibility for extending the editor's functionality based on specific requirements or user preferences.
 
+**Layered Architecture Details**
+
 1.  **Presentation Layer (User Interface):**
     
 
@@ -30,6 +32,9 @@ By organizing the text editor's functionality into these distinct layers, we ens
     
 -   Functionalities: Reading from and writing to files, managing file formats and encoding.
 
+<br>
+<br>
   
-  
-  
+ ![alt text](<sdp project Layers.jpg>)
+
+<p style="text-align: center;">Figure: Diagram of Layered Architecture Pattern</p>
