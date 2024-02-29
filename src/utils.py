@@ -7,3 +7,4 @@ from Utils.save import Save;
 from Utils.saveas import SaveAs;
 from Utils.highlight import Highlight;
 from Utils.findall import FindAll;
+from Utils.replaceall import ReplaceAll;

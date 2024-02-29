@@ -41,7 +41,22 @@ class App(tk.Tk):
 
         self.find_text_label.grid(row=0,column=0,pady=2)
         self.find_text_entry.grid(row=0,column=1,columnspan=2,pady=2)
-        self.find_text_btn.grid(row=0,column=3,pady=2,padx=8)                                                                                                                                                                                                            
+        self.find_text_btn.grid(row=0,column=3,pady=2,padx=8)    
+
+        ## Replace all 
+        self.replace_frame = tk.Frame(master=self)
+        self.replace_frame.pack()
+
+        self.replace_text_label = tk.Label(master=self.replace_frame,text='replace: ')
+        self.replace_text_entry = tk.Entry(master=self.replace_frame)
+        self.replace_text_btn = tk.Button(master=self.replace_frame,
+                                        text="replace All Occurances",
+                                        command=utils.ReplaceAll(master=self)
+                                        )
+
+        self.replace_text_label.grid(row=0,column=0,pady=2)
+        self.replace_text_entry.grid(row=0,column=1,columnspan=2,pady=2)
+        self.replace_text_btn.grid(row=0,column=3,pady=2,padx=8)                                                                                                                                                                                                         
 
         
 
