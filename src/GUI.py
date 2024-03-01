@@ -124,6 +124,12 @@ class App(tk.Tk):
         self.bind_all('<Control-X>', utils.Exit(master=self))
         self.wm_protocol("WM_DELETE_WINDOW", utils.Exit(master=self))
 
+        
+
+    def auto_save_text_file(self):
+        utils.AutoSave(master=self)()
+
+        self.after(3000,self.auto_save_text_file)
 
 
 
@@ -131,6 +137,7 @@ class App(tk.Tk):
 
 if __name__ == '__main__':
     app = App()
+    app.auto_save_text_file()
     app.mainloop()
 
 
