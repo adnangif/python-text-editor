@@ -3,38 +3,31 @@
   
   
 
-**Decision:** Use Layered Architecture for Text Editor Development
+**Decision:** Use Repository Architecture for Text Editor Development
 
   
 
 **Reasoning:**
-By organizing the text editor's functionality into these distinct layers, we ensure modularity, scalability, and maintainability. Each layer focuses on specific tasks, making it easier to understand, develop, and maintain the text editor codebase. Additionally, the optional layers (Language Support and Extensions/Plugins) provide flexibility for extending the editor's functionality based on specific requirements or user preferences.
+By organizing the text editor's functionality into distinct Components, we ensure modularity, scalability, and maintainability. Each component focuses on specific tasks, making it easier to understand, develop, and maintain the text editor codebase. Additionally, the optional components (Language Support and Extensions/Plugins) provide flexibility for extending the editor's functionality based on specific requirements or user preferences.
 
-**Layered Architecture Details**
+**Repository Architecture Components for Text Editor**
 
-1.  **Presentation Layer (User Interface):**
-    
+1.  **Open**
+2.  **Save**
+3.  **Save As**
+4.  **Auto Save**
+5.  **Copy**
+6.  **Paste**
+7.  **Undo/Redo**
+8.  **Highlight**
+9.  **Find All**
+10.  **Replace All**
+11.  **Copy All**
 
--   Responsibility: Handles the graphical user interface (GUI) components and interactions.
-  
-  
-
-2.  **Application Layer:**
--   Responsibility: Implements core logic and functionalities of the text editor.
-    
--   Functionalities: Text editing operations (insertion, deletion, formatting), syntax highlighting, undo/redo, file operations.
-
-  
-
-3.  **Data Access Layer:**
-
--   Responsibility: Manages the storage and retrieval of data, including file input/output operations.
-    
--   Functionalities: Reading from and writing to files, managing file formats and encoding.
 
 <br>
 <br>
   
- ![alt text](<sdp project Layers.jpg>)
+ ![alt text](<sdp project Architecture.png>)
 
-<p style="text-align: center;">Figure: Diagram of Layered Architecture Pattern</p>
+<p style="text-align: center;">Figure: Diagram of Layered Repository Pattern</p>
