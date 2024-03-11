@@ -120,6 +120,9 @@ class App(tk.Tk):
                                         command=utils.toggleAutoSave(master=self),
                                         )
 
+        self.menu_item_Edit.add_command(label="Word count",
+                                        command=utils.CountWords(master=self),
+                                        )
 
         
         ## Bindings

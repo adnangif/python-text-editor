@@ -10,3 +10,4 @@ from Components.findall import FindAll;
 from Components.replaceall import ReplaceAll;
 from Components.autosave import AutoSave;
 from Components.toggleAutoSave import toggleAutoSave
+from Components.countwords import CountWords
