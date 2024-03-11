@@ -4,7 +4,9 @@ import GUI
 import os
 
 def set_clipboard_text(text):
-    command = 'echo ' + text.strip() + '| clip'
+    command: str = 'echo ' + text.strip() + '| clip'
+
+    command.replace('\n','')
     os.system(command)
 
 def CopyAll(master: GUI.App):
