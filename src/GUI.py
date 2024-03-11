@@ -130,6 +130,7 @@ class App(tk.Tk):
         self.bind_all('<Control-s>', utils.Save(master=self))
         self.bind_all('<Control-S>', utils.SaveAs(master=self))
         self.bind_all('<Control-X>', utils.Exit(master=self))
+        self.bind_all('<Control-C>', utils.CopyAll(master=self))
         self.wm_protocol("WM_DELETE_WINDOW", utils.Exit(master=self))
 
         
