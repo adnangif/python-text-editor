@@ -6,8 +6,9 @@ import GUI
 
 def AutoSave(master: GUI.App):
     def inner_function(event=None):
+        if(master.autosave == False): return
         content=master.main_text_box.get('1.0',tk.END)
-        print(content)
+        # print(content)
         if (master.file_path==''):
             print("No file path was given")
             return

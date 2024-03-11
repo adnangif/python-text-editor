@@ -11,6 +11,7 @@ class App(tk.Tk):
         self.content: str = ""
         self.isSaved: bool = False;
         self.isEdited:bool = False;
+        self.autoSave:bool = False
 
         
         self.title("Text Editor")
@@ -113,6 +114,10 @@ class App(tk.Tk):
         
         self.menu_item_Edit.add_command(label="Highlight",
                                         command=utils.Highlight(master=self),
+                                        )
+
+        self.menu_item_Edit.add_command(label="Toggle Auto Save",
+                                        command=utils.toggleAutoSave(master=self),
                                         )
 
 
