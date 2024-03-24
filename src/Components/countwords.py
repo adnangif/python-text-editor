@@ -11,6 +11,9 @@ def CountWords(master: GUI.App):
         words = content.split(' ')
         
         total_words = len(words)
+
+        if(len(content.strip()) == 0):
+            total_words = 0
         
         print(total_words)
 
