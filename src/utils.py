@@ -10,4 +10,4 @@ from findall.findall import FindAll;
 from replaceall.replaceall import ReplaceAll;
 from autosave.autosave import AutoSave;
 from helpers.toggleAutoSave import toggleAutoSave
-from countwords.countwords import CountWords
+from countwords.countwords import *

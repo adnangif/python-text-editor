@@ -16,4 +16,5 @@ def Open(master):
             master.main_text_box.insert(index=tk.END,chars=content)
             master.title(master.file_path) 
             master.content = content
+        return master.content
     return inner_function
