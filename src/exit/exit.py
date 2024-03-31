@@ -1,11 +1,11 @@
 import sys
 import tkinter as tk
 from tkinter import filedialog,messagebox
-import GUI
+import main
 
 
 
-def Exit(master: GUI.App):
+def Exit(master: main.App):
     def inner_function(event=None):
         content = master.main_text_box.get('1.0',tk.END);
         

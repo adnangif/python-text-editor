@@ -1,8 +1,8 @@
 import tkinter as tk
 from tkinter import filedialog,messagebox
-import GUI
+import main
 
-def Open(master: GUI.App):
+def Open(master: main.App):
     def inner_function(event=None):
         master.file_path = filedialog.askopenfilename()
 
@@ -16,4 +16,4 @@ def Open(master: GUI.App):
             master.main_text_box.insert(index=tk.END,chars=content)
             master.title(master.file_path) 
             master.content = content
-    return inner_function;
+    return inner_function

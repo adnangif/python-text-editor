@@ -1,9 +1,9 @@
 import tkinter as tk
 from tkinter import filedialog,messagebox
-import GUI
+import main
 
 
-def Paste(master: GUI.App):
+def Paste(master: main.App):
     def inner_function(event=None):
         pass;
     

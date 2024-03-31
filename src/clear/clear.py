@@ -1,10 +1,10 @@
 import tkinter as tk
 from tkinter import filedialog,messagebox
-import GUI
+import main
 
 
 
-def Clear(master: GUI.App):
+def Clear(master: main.App):
     def inner_function(event=None):
         master.main_text_box.delete('1.0',tk.END)
     

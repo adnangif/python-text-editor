@@ -1,10 +1,10 @@
 import tkinter as tk
 from tkinter import filedialog,messagebox
-import GUI
+import main
 
 
 
-def FindAll(master: GUI.App):
+def FindAll(master: main.App):
     def inner_function(event=None):
         master.main_text_box.tag_configure('found',background='blue',foreground='white')
         master.main_text_box.tag_remove('found','1.0',tk.END)

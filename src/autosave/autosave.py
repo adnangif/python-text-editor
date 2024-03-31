@@ -1,11 +1,11 @@
 import tkinter as tk
 from tkinter import filedialog,messagebox
-import GUI
+import main
 from helpers import helpers
 
 
 
-def AutoSave(master: GUI.App):
+def AutoSave(master: main.App):
     def inner_function(event=None):
         try:
             if(master.autoSave == False): return

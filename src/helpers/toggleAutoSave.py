@@ -1,8 +1,8 @@
 import tkinter as tk
 from tkinter import filedialog,messagebox
-import GUI
+import main
 
-def toggleAutoSave(master: GUI.App):
+def toggleAutoSave(master: main.App):
     def inner_function(event=None):
         master.autoSave = not master.autoSave
 

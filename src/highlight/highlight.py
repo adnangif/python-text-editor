@@ -1,10 +1,10 @@
 import tkinter as tk
 from tkinter import filedialog,messagebox
-import GUI
+import main
 
 
 
-def Highlight(master: GUI.App):
+def Highlight(master: main.App):
     def inner_function(event=None):
         start_index = master.main_text_box.index('sel.first')
         last_index = master.main_text_box.index('sel.last')

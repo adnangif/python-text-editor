@@ -127,17 +127,11 @@ class App(tk.Tk):
         self.autoSave:bool = False
         
         self.basic_setups()
-
         self.set_menu_bar()
-
         self.set_find_all()
-
         self.set_replace_all()
-
         self.set_main_text_box()
-
         self.set_btn_functionality()
-
         self.set_bindings()
 
         
@@ -148,13 +142,14 @@ class App(tk.Tk):
         self.after(3000,self.auto_save_text_file)
 
 
-
-
-
 if __name__ == '__main__':
     app = App()
+
+
+
     app.auto_save_text_file()
     app.mainloop()
+
 
 
 

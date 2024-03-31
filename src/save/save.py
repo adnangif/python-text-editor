@@ -1,9 +1,9 @@
 import tkinter as tk
 from tkinter import filedialog,messagebox
-import GUI
+import main
 from helpers import helpers
 
-def Save(master: GUI.App):
+def Save(master: main.App):
     def inner_function(event=None):
         try:
            
