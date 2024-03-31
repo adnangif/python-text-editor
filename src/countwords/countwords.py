@@ -18,5 +18,6 @@ def CountWords(master):
         print(total_words)
 
         messagebox.askokcancel(title='word count',message=f"Total number of words is: {total_words}")
+        return total_words
     
-    return inner_function;
+    return inner_function
