@@ -4,7 +4,7 @@ import main
 
 
 
-def Highlight(master: main.App):
+def Highlight(master):
     def inner_function(event=None):
         start_index = master.main_text_box.index('sel.first')
         last_index = master.main_text_box.index('sel.last')

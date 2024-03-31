@@ -1,10 +1,10 @@
 import tkinter as tk
 from tkinter import filedialog,messagebox
-import main
 
 
 
-def ReplaceAll(master: main.App):
+
+def ReplaceAll(master):
     def inner_function(event=None):
     
       

@@ -1,9 +1,9 @@
 import tkinter as tk
 from tkinter import filedialog,messagebox
-import main
 
 
-def CountWords(master: main.App):
+
+def CountWords(master):
     def inner_function(event=None):
         
         content = master.main_text_box.get('1.0',tk.END)

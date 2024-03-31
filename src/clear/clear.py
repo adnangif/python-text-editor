@@ -4,7 +4,7 @@ import main
 
 
 
-def Clear(master: main.App):
+def Clear(master):
     def inner_function(event=None):
         master.main_text_box.delete('1.0',tk.END)
     

@@ -4,7 +4,7 @@ import main
 from helpers import helpers
 
 
-def SaveAs(master: main.App):
+def SaveAs(master):
     def inner_function(event=None):
         try:
             master.file_path=filedialog.asksaveasfilename(filetypes=[("txt files ",".txt")],defaultextension=".txt")

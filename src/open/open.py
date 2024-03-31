@@ -1,8 +1,8 @@
 import tkinter as tk
 from tkinter import filedialog,messagebox
-import main
 
-def Open(master: main.App):
+
+def Open(master):
     def inner_function(event=None):
         master.file_path = filedialog.askopenfilename()
 

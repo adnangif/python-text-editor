@@ -3,7 +3,7 @@ from tkinter import filedialog,messagebox
 import main
 from helpers import helpers
 
-def Save(master: main.App):
+def Save(master):
     def inner_function(event=None):
         try:
            
