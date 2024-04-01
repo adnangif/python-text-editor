@@ -52,62 +52,18 @@ class App(tk.Tk):
         self.main_text_box.pack(padx=10,pady=10,expand=True,fill='both')
     
     def set_btn_functionality(self):
-        self.menu_item_File.add_command(label="Open",
-                                        command=utils.Open(master=self),
-                                        accelerator="Ctrl+O".rjust(15),
-                                        )
-
-        self.menu_item_File.add_command(label="Save As",
-                                        command=utils.SaveAs(master=self),
-                                        accelerator="Ctrl+Shift+S".rjust(15),
-                                        )
-
-        self.menu_item_File.add_command(label="Save",
-                                        command=utils.Save(master=self),
-                                        accelerator="Ctrl+S".rjust(15),
-                                        )
-
-        self.menu_item_File.add_command(label="Exit",
-                                        command=utils.Exit(master=self),
-                                        accelerator="Ctrl+Shift+X".rjust(15),
-                                        )
-
-        self.menu_item_Edit.add_command(label="Copy All",
-                                        command=utils.CopyAll(master=self),
-                                        accelerator="Ctrl+Shift+C".rjust(15),
-                                        )
-
-        self.menu_item_Edit.add_command(label="Paste",
-                                        command=utils.Paste(master=self),
-                                        accelerator="Ctrl+Shift+V".rjust(15),
-                                        )
-
-        self.menu_item_Edit.add_command(label="Clear",
-                                        command=utils.Clear(master=self),
-                                        accelerator="Ctrl+Shift+D".rjust(15),
-                                        )
-
-        self.menu_item_Edit.add_command(label="Undo",
-                                        command=self.main_text_box.edit_undo,
-                                        accelerator="Ctrl+Z".rjust(15),
-                                        )
-
-        self.menu_item_Edit.add_command(label="Redo",
-                                        command=self.main_text_box.edit_redo,
-                                        accelerator="Ctrl+Y".rjust(15),
-                                        )
-        
-        self.menu_item_Edit.add_command(label="Highlight",
-                                        command=utils.Highlight(master=self),
-                                        )
-
-        self.menu_item_Edit.add_command(label="Toggle Auto Save",
-                                        command=utils.toggleAutoSave(master=self),
-                                        )
-
-        self.menu_item_Edit.add_command(label="Word count",
-                                        command=utils.CountWords(master=self),
-                                        )
+        self.menu_item_File.add_command(label="Open",command=utils.Open(master=self),accelerator="Ctrl+O".rjust(15),)
+        self.menu_item_File.add_command(label="Save As", command=utils.SaveAs(master=self),accelerator="Ctrl+Shift+S".rjust(15),)
+        self.menu_item_File.add_command(label="Save",command=utils.Save(master=self), accelerator="Ctrl+S".rjust(15),)
+        self.menu_item_File.add_command(label="Exit",command=utils.Exit(master=self),accelerator="Ctrl+Shift+X".rjust(15),)
+        self.menu_item_Edit.add_command(label="Copy All",command=utils.CopyAll(master=self), accelerator="Ctrl+Shift+C".rjust(15),)
+        self.menu_item_Edit.add_command(label="Paste",command=utils.Paste(master=self),accelerator="Ctrl+Shift+V".rjust(15), )
+        self.menu_item_Edit.add_command(label="Clear", command=utils.Clear(master=self), accelerator="Ctrl+Shift+D".rjust(15),  )
+        self.menu_item_Edit.add_command(label="Undo", command=self.main_text_box.edit_undo,accelerator="Ctrl+Z".rjust(15),)
+        self.menu_item_Edit.add_command(label="Redo",command=self.main_text_box.edit_redo,accelerator="Ctrl+Y".rjust(15), )
+        self.menu_item_Edit.add_command(label="Highlight",command=utils.Highlight(master=self), )
+        self.menu_item_Edit.add_command(label="Toggle Auto Save", command=utils.toggleAutoSave(master=self), )
+        self.menu_item_Edit.add_command(label="Word count", command=utils.CountWords(master=self), )
 
     def set_bindings(self):
         self.bind_all('<Control-o>', utils.Open(master=self))
