@@ -4,6 +4,7 @@ from open.open import openFile
 
 main = __import__("main")
 utils= __import__("utils")
+TEXT_BOX_START = '1.0'
 
 def test_open_content_with_invalid_path():
     # Mocking the main_text_box and file_path for testing
@@ -44,5 +45,5 @@ def test_open_content_text_box_has_correct_content():
     
     result = openFile(master)
     
-    assert open_content == master.main_text_box.get('1.0',tk.END)
+    assert open_content == master.main_text_box.get(TEXT_BOX_START,tk.END)
     

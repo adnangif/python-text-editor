@@ -1,8 +1,10 @@
 import tkinter as tk
 from tkinter import filedialog,messagebox
 
+TEXT_BOX_START = '1.0'
+
 def GetCount(master):
-    content = master.main_text_box.get('1.0',tk.END)   
+    content = master.main_text_box.get(TEXT_BOX_START,tk.END)   
     words = content.split(' ')     
     total_words = len(words)
     if(len(content.strip()) == 0):

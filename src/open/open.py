@@ -1,12 +1,12 @@
 import tkinter as tk
 from tkinter import filedialog,messagebox
-
+TEXT_BOX_START = '1.0'
 
 def openFile(master):
     try:
         with open(master.file_path) as fo:
             content = fo.read()
-            master.main_text_box.delete('1.0',tk.END)
+            master.main_text_box.delete(TEXT_BOX_START,tk.END)
             master.main_text_box.insert(index=tk.END,chars=content)
             master.title(master.file_path) 
             master.content = content

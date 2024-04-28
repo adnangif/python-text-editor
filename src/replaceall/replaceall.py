@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import filedialog,messagebox
-
+TEXT_BOX_START = '1.0'
 
 
 
@@ -15,12 +15,12 @@ def ReplaceAll(master):
             return
         if(new_string.strip() == ''):
             return
-        content = master.main_text_box.get('1.0',tk.END)
+        content = master.main_text_box.get(TEXT_BOX_START,tk.END)
         content = content.replace(search_string,new_string)
             
-        master.main_text_box.delete("1.0", "end")
+        master.main_text_box.delete(TEXT_BOX_START, "end")
 
     
-        master.main_text_box.insert("1.0", content)
+        master.main_text_box.insert(TEXT_BOX_START, content)
 
     return inner_function;

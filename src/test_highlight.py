@@ -4,7 +4,8 @@ from highlight.highlight import Highlight
 
 main = __import__("main")
 utils= __import__("utils") 
-
+TEXT_BOX_START = '1.0'
+TEXT_BOX_START2 = '1.4'
 
 def test_inner_function_highlight():
     app = main.App()
@@ -14,7 +15,7 @@ def test_inner_function_highlight():
     app.main_text_box.insert(tk.END, 'This is a test.')
 
     # Select a portion of the text
-    app.main_text_box.tag_add('sel', '1.0', '1.4')
+    app.main_text_box.tag_add('sel', TEXT_BOX_START , TEXT_BOX_START2)
 
     # Call inner_function to highlight the selected text
     inner_function()
