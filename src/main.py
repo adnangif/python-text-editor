@@ -3,12 +3,13 @@ from tkinter import scrolledtext
 import utils
 
 MAIN_FONT='aerial 13'
+TITLE="Text Editor"
 
 
 
 class App(tk.Tk):
     def basic_setups(self):
-        self.title("Text Editor")
+        self.title(TITLE)
         self.option_add("*Font",MAIN_FONT)
         self.geometry("700x500")
 

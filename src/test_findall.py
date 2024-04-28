@@ -20,7 +20,7 @@ def test_inner_function_no_match():
     inner_function()
 
     # No tags should be applied if search term doesn't match
-    assert app.main_text_box.tag_ranges() == (TEST_FINDALL_TAG_RANGE)
+    assert app.main_text_box.tag_ranges(TEST_FINDALL_TAG_RANGE) == ()
 
 
 def test_inner_function_single_match():
