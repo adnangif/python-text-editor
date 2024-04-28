@@ -15,7 +15,7 @@ def Highlight(master):
         try:
             start_index = master.main_text_box.index(HIGHLIGHT_FIRST_INDEX)
             last_index = master.main_text_box.index(HIGHLIGHT_LAST_INDEX)
-            master.main_text_box.tag_configure(HIGHLIGHT_BOX,HIGHLIGHT_BACKGROUND,HIGHLIGHT_FOREGROUND)
+            master.main_text_box.tag_configure(HIGHLIGHT_BOX,background=HIGHLIGHT_BACKGROUND,foreground=HIGHLIGHT_FOREGROUND)
             master.main_text_box.tag_add(HIGHLIGHT_BOX,start_index,last_index)
         except:
             return

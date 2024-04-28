@@ -2,7 +2,7 @@ from ast import Raise
 import tkinter as tk
 from tkinter import filedialog,messagebox
 TEXT_BOX_START = '1.0'
-HELPERS_OPEN_STRING='W'
+HELPERS_OPEN_STRING='w'
 
 
 

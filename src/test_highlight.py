@@ -8,6 +8,7 @@ TEXT_BOX_START = '1.0'
 TEXT_BOX_START2 = '1.4'
 TEST_HIGHLIGHT_TEST='This is a test.'
 TEST_HIGHLIGHT_TAG='sel'
+TEST_HIGHLIGHT_TAG_RANGE='highlight'
 
 def test_inner_function_highlight():
     app = main.App()
@@ -23,7 +24,7 @@ def test_inner_function_highlight():
     inner_function()
 
     # Check if the selected text is highlighted
-    tag_ranges = app.main_text_box.tag_ranges('highlight')
+    tag_ranges = app.main_text_box.tag_ranges(TEST_HIGHLIGHT_TAG_RANGE)
     assert tag_ranges != ()  # The 'highlight' tag should be applied
 
 def test_inner_function_no_selection():
@@ -37,6 +38,6 @@ def test_inner_function_no_selection():
     inner_function()
 
     # Check if there is no 'highlight' tag applied
-    tag_ranges = app.main_text_box.tag_ranges('highlight')
+    tag_ranges = app.main_text_box.tag_ranges(TEST_HIGHLIGHT_TAG_RANGE)
     assert tag_ranges == () 
     

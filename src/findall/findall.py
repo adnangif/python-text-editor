@@ -8,7 +8,7 @@ FINDALL_BLANK_STRING=''
 
 def FindAll(master):
     def inner_function(event=None):
-        master.main_text_box.tag_configure(FINDALL_CHECK,FINDALL_BACKGROUND,FINDALL_FOREGROUND)
+        master.main_text_box.tag_configure(FINDALL_CHECK,background=FINDALL_BACKGROUND ,foreground=FINDALL_FOREGROUND)
         master.main_text_box.tag_remove(FINDALL_CHECK,TEXT_BOX_START,tk.END)
         search_string = master.find_text_entry.get()
 
