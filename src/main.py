@@ -4,14 +4,23 @@ import utils
 
 MAIN_FONT='aerial 13'
 TITLE="Text Editor"
+FONT="*Font"
+GEOMETRY="700x500"
+NUM1=0 
+NUM2=1
+NUM3=2
+NUM4=3
+NUM5=8
+NUM6=10
+NUM7=15
 
 
 
 class App(tk.Tk):
     def basic_setups(self):
         self.title(TITLE)
-        self.option_add("*Font",MAIN_FONT)
-        self.geometry("700x500")
+        self.option_add(FONT,MAIN_FONT)
+        self.geometry(GEOMETRY)
 
     def set_menu_bar(self):
         self.menu_bar = tk.Menu(master=self)
@@ -32,9 +41,9 @@ class App(tk.Tk):
                                         command=utils.FindAll(master=self)
                                         )
 
-        self.find_text_label.grid(row=0,column=0,pady=2)
-        self.find_text_entry.grid(row=0,column=1,columnspan=2,pady=2)
-        self.find_text_btn.grid(row=0,column=3,pady=2,padx=8) 
+        self.find_text_label.grid(row=NUM1,column=NUM1,pady=2)
+        self.find_text_entry.grid(row=NUM1,column=NUM2,columnspan=NUM3,pady=NUM3)
+        self.find_text_btn.grid(row=NUM1,column=NUM4,pady=NUM3,padx=NUM5) 
     
     def set_replace_all(self):
         self.replace_frame = tk.Frame(master=self)
@@ -47,24 +56,24 @@ class App(tk.Tk):
                                         command=utils.ReplaceAll(master=self)
                                         )
 
-        self.replace_text_label.grid(row=0,column=0,pady=2)
-        self.replace_text_entry.grid(row=0,column=1,columnspan=2,pady=2)
-        self.replace_text_btn.grid(row=0,column=3,pady=2,padx=8)  
+        self.replace_text_label.grid(row=NUM1,column=NUM1,pady=2)
+        self.replace_text_entry.grid(row=NUM1,column=NUM2,columnspan=NUM3,pady=NUM3)
+        self.replace_text_btn.grid(row=NUM1,column=NUM4,pady=NUM3,padx=NUM5)  
 
     def set_main_text_box(self):
         self.main_text_box = scrolledtext.ScrolledText(master=self,undo=True)
-        self.main_text_box.pack(padx=10,pady=10,expand=True,fill='both')
+        self.main_text_box.pack(padx=NUM6,pady=NUM6,expand=True,fill='both')
     
     def set_btn_functionality(self):
-        self.menu_item_File.add_command(label="Open",command=utils.Open(master=self),accelerator="Ctrl+O".rjust(15),)
-        self.menu_item_File.add_command(label="Save As", command=utils.SaveAs(master=self),accelerator="Ctrl+Shift+S".rjust(15),)
-        self.menu_item_File.add_command(label="Save",command=utils.Save(master=self), accelerator="Ctrl+S".rjust(15),)
-        self.menu_item_File.add_command(label="Exit",command=utils.Exit(master=self),accelerator="Ctrl+Shift+X".rjust(15),)
-        self.menu_item_Edit.add_command(label="Copy All",command=utils.CopyAll(master=self), accelerator="Ctrl+Shift+C".rjust(15),)
-        self.menu_item_Edit.add_command(label="Paste",command=utils.Paste(master=self),accelerator="Ctrl+Shift+V".rjust(15), )
-        self.menu_item_Edit.add_command(label="Clear", command=utils.Clear(master=self), accelerator="Ctrl+Shift+D".rjust(15),  )
-        self.menu_item_Edit.add_command(label="Undo", command=self.main_text_box.edit_undo,accelerator="Ctrl+Z".rjust(15),)
-        self.menu_item_Edit.add_command(label="Redo",command=self.main_text_box.edit_redo,accelerator="Ctrl+Y".rjust(15), )
+        self.menu_item_File.add_command(label="Open",command=utils.Open(master=self),accelerator="Ctrl+O".rjust(NUM7),)
+        self.menu_item_File.add_command(label="Save As", command=utils.SaveAs(master=self),accelerator="Ctrl+Shift+S".rjust(NUM7),)
+        self.menu_item_File.add_command(label="Save",command=utils.Save(master=self), accelerator="Ctrl+S".rjust(NUM7),)
+        self.menu_item_File.add_command(label="Exit",command=utils.Exit(master=self),accelerator="Ctrl+Shift+X".rjust(NUM7),)
+        self.menu_item_Edit.add_command(label="Copy All",command=utils.CopyAll(master=self), accelerator="Ctrl+Shift+C".rjust(NUM7),)
+        self.menu_item_Edit.add_command(label="Paste",command=utils.Paste(master=self),accelerator="Ctrl+Shift+V".rjust(NUM7), )
+        self.menu_item_Edit.add_command(label="Clear", command=utils.Clear(master=self), accelerator="Ctrl+Shift+D".rjust(NUM7),  )
+        self.menu_item_Edit.add_command(label="Undo", command=self.main_text_box.edit_undo,accelerator="Ctrl+Z".rjust(NUM7),)
+        self.menu_item_Edit.add_command(label="Redo",command=self.main_text_box.edit_redo,accelerator="Ctrl+Y".rjust(NUM7), )
         self.menu_item_Edit.add_command(label="Highlight",command=utils.Highlight(master=self), )
         self.menu_item_Edit.add_command(label="Toggle Auto Save", command=utils.toggleAutoSave(master=self), )
         self.menu_item_Edit.add_command(label="Word count", command=utils.CountWords(master=self), )
