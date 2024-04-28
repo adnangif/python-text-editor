@@ -1,16 +1,18 @@
 import tkinter as tk
 from tkinter import filedialog,messagebox
 TEXT_BOX_START = '1.0'
-
-
+FINDALL_CHECK='found'
+FINDALL_BACKGROUND='blue'
+FINDALL_FOREGROUND='white'
+FINDALL_BLANK_STRING=''
 
 def FindAll(master):
     def inner_function(event=None):
-        master.main_text_box.tag_configure('found',background='blue',foreground='white')
-        master.main_text_box.tag_remove('found',TEXT_BOX_START,tk.END)
+        master.main_text_box.tag_configure(FINDALL_CHECK,FINDALL_BACKGROUND,FINDALL_FOREGROUND)
+        master.main_text_box.tag_remove(FINDALL_CHECK,TEXT_BOX_START,tk.END)
         search_string = master.find_text_entry.get()
 
-        if(search_string.strip() == ''):
+        if(search_string.strip() == FINDALL_BLANK_STRING) :
             return
         start = TEXT_BOX_START 
         while True:

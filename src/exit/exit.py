@@ -2,6 +2,8 @@ import sys
 import tkinter as tk
 from tkinter import filedialog,messagebox
 TEXT_BOX_START = '1.0'
+EXIT_BLANK_STRING =''
+
 
 
 
@@ -9,7 +11,7 @@ def Exit(master):
     def inner_function(event=None):
         content = master.main_text_box.get(TEXT_BOX_START,tk.END);
         
-        if(content == '' and master.file_path == ''):
+        if(content == EXIT_BLANK_STRING and master.file_path == EXIT_BLANK_STRING):
             sys.exit()
         
         save_before_exit: bool = messagebox.askyesno("Are you sure?", "Save Changes?")
@@ -18,7 +20,7 @@ def Exit(master):
 
         
 
-        if(master.file_path == ''):
+        if(master.file_path == EXIT_BLANK_STRING):
             master.file_path = filedialog.asksaveasfilename(filetypes=[("txt files ",".txt")],defaultextension=".txt")
 
         

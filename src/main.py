@@ -2,11 +2,14 @@ import tkinter as tk
 from tkinter import scrolledtext
 import utils
 
+MAIN_FONT='aerial 13'
+
+
 
 class App(tk.Tk):
     def basic_setups(self):
         self.title("Text Editor")
-        self.option_add("*Font",'aerial 13')
+        self.option_add("*Font",MAIN_FONT)
         self.geometry("700x500")
 
     def set_menu_bar(self):

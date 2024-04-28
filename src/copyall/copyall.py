@@ -3,10 +3,12 @@ from tkinter import filedialog,messagebox
 
 import os
 TEXT_BOX_START = '1.0'
+COPYALL_BLANK_STRING=''
+
 def set_clipboard_text(text):
     command: str = 'echo ' + text.strip() + '| clip'
 
-    command.replace('\n','')
+    command.replace('\n',COPYALL_BLANK_STRING)
     os.system(command)
 
 def CopyAll(master):
