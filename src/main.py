@@ -13,6 +13,7 @@ NUM4=3
 NUM5=8
 NUM6=10
 NUM7=15
+MAIN_EMPTY_STRING=""
 
 
 
@@ -41,7 +42,7 @@ class App(tk.Tk):
                                         command=utils.FindAll(master=self)
                                         )
 
-        self.find_text_label.grid(row=NUM1,column=NUM1,pady=2)
+        self.find_text_label.grid(row=NUM1,column=NUM1,pady=NUM3)
         self.find_text_entry.grid(row=NUM1,column=NUM2,columnspan=NUM3,pady=NUM3)
         self.find_text_btn.grid(row=NUM1,column=NUM4,pady=NUM3,padx=NUM5) 
     
@@ -56,7 +57,7 @@ class App(tk.Tk):
                                         command=utils.ReplaceAll(master=self)
                                         )
 
-        self.replace_text_label.grid(row=NUM1,column=NUM1,pady=2)
+        self.replace_text_label.grid(row=NUM1,column=NUM1,pady=NUM3)
         self.replace_text_entry.grid(row=NUM1,column=NUM2,columnspan=NUM3,pady=NUM3)
         self.replace_text_btn.grid(row=NUM1,column=NUM4,pady=NUM3,padx=NUM5)  
 
@@ -89,8 +90,8 @@ class App(tk.Tk):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-        self.file_path: str = ""
-        self.content: str = ""
+        self.file_path: str = MAIN_EMPTY_STRING
+        self.content: str = MAIN_EMPTY_STRING
         self.isSaved: bool = False
         self.isEdited:bool = False
         self.autoSave:bool = False
